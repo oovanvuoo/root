@@ -37,7 +37,6 @@ public class HomeController {
 		DateFormat dateFormat = DateFormat.getDateTimeInstance(DateFormat.LONG, DateFormat.LONG, locale);
 		
 		String formattedDate = dateFormat.format(date);
-		
 		model.addAttribute("serverTime", formattedDate );
 		
 		return "home";
@@ -50,6 +49,7 @@ public class HomeController {
 			System.out.println("<Empty>");
 		}else{
 			for(User tmp : listUser){
+				//Show đầy đủ thông tin của 1 user
 				 System.out.println(tmp.getID() + "\t" + tmp.getUsername() + "\t" + tmp.getPassword() + "\t" + tmp.getName() + "\t" + tmp.getStatus() );
 			}
 		}
