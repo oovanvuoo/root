@@ -50,9 +50,11 @@ public class HomeController {
 			System.out.println("<Empty>");
 		}else{
 			for(User tmp : listUser){
+				//THêm vài chú thích nữa
 				 System.out.println(tmp.getID() + "\t" + tmp.getUsername() + "\t" + tmp.getPassword() + "\t" + tmp.getName() + "\t" + tmp.getStatus() );
 			}
 		}
+		//Chổ này là hết chương hàm và trả về chuổi "hôme"
 		return "home";
 	}	
 }
